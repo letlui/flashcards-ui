@@ -1,3 +1,5 @@
-export default function MainPage () {
-    return <div>Main page</div>;
+import {redirect} from 'next/navigation';
+
+export default function MainPage() {
+    redirect('overview');
 }
