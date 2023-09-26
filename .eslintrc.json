@@ -8,7 +8,6 @@
     "airbnb-base",
     "plugin:eslint-comments/recommended",
     "plugin:promise/recommended",
-    "plugin:node/recommended",
     "plugin:unicorn/recommended",
     "plugin:sonarjs/recommended",
     "plugin:import/errors",
@@ -28,7 +27,6 @@
   "plugins": [
     "eslint-comments",
     "promise",
-    "node",
     "import",
     "unicorn",
     "sonarjs",
@@ -52,15 +50,6 @@
       {
         "allow": [
           "_id"
-        ]
-      }
-    ],
-    // Allow typescript style imports
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      {
-        "ignores": [
-          "modules"
         ]
       }
     ],
@@ -91,7 +80,7 @@
       2,
       4
     ],
-    "node/no-extraneous-import": "off",
+    "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "object-curly-spacing": [
       "error",
@@ -106,15 +95,9 @@
           "Props": true
         }
       }
+    ],
+    "unicorn/filename-case": [
+      "off"
     ]
-  },
-  "overrides": [
-    {
-      "files": "test/**/*.js",
-      "rules": {
-        // Needed to import supertest in test files
-        "node/no-unpublished-require": "off"
-      }
-    }
-  ]
+  }
 }
